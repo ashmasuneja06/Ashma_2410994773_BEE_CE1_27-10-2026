@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyDeals | Everyday Finds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DailyDeals</h1>
+        <p>Everyday Finds, Made Easy.</p>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <h2>Explore Products</h2>
+
+            <div class="filters">
+                <input type="text" id="search"
+                       placeholder="Search products...">
+
+                <select id="category">
+                    <option value="all">All Categories</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Home">Home</option>
+                    <option value="Personal Care">Personal Care</option>
+                    <option value="Study">Study & Office</option>
+                </select>
+
+                <select id="sort">
+                    <option value="default">Sort By</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+
+            <div id="products" class="product-grid"></div>
+        </section>
+
+        <section class="cart-section">
+            <h2>🛒 Your Cart (<span id="cart-count">0</span>)</h2>
+
+            <div id="cart-items"></div>
+
+            <div class="summary">
+                <p>Subtotal: ₹<span id="subtotal">0.00</span></p>
+
+                <div class="coupon">
+                    <input type="text" id="coupon"
+                           placeholder="Enter coupon code (SAVE10)">
+                    <button id="apply-coupon">Apply</button>
+                </div>
+
+                <p id="coupon-message"></p>
+                <p>Discount: ₹<span id="discount">0.00</span></p>
+                <h3>Total: ₹<span id="total">0.00</span></h3>
+
+                <button id="checkout-button" class="checkout-btn">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div id="checkout-box" class="checkout-box">
+        <h2>Checkout</h2>
+
+        <form id="checkout-form">
+            <input type="text" id="customer-name"
+                   placeholder="Full Name" required>
+
+            <input type="email" id="customer-email"
+                   placeholder="Email Address" required>
+
+            <textarea id="customer-address"
+                      placeholder="Delivery Address" required></textarea>
+
+            <button type="submit" class="checkout-btn">
+                Place Order
+            </button>
+
+            <button type="button" id="cancel-checkout">
+                Cancel
+            </button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
